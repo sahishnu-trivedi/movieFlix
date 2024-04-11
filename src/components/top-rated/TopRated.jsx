@@ -25,7 +25,7 @@ export default function TopRated() {
 
     return(
         <div className="container mx-auto mt-12">
-            <div className="columns-2">
+            <div className="columns-1 md:columns-2">
                 <div className="top-rated-movie-block">
                     <h3 className='text-3xl font-bold text-primary-color'>Top Rated Movies</h3>
                     {
@@ -46,7 +46,7 @@ export default function TopRated() {
                     }
                 </div>
                 <div>
-                    <h3 className='text-3xl font-bold dark:text-white text-primary-color'>Top Rated Series</h3>
+                    <h3 className='text-3xl font-bold dark:text-white text-primary-color mt-3 md:mt-0'>Top Rated Series</h3>
                     {
                         topRatedSeries.slice(0, 10).map((series, index) =>
                             <div key={series.id} className="py-3 top-rated-movie-list">

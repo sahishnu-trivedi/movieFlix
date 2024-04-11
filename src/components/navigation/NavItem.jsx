@@ -13,7 +13,7 @@ export default function NavItem({path, label}) {
   return (
     <li className="nav-item mb-4">
         <NavLink to={path} onClick={toggleHamurgerMenu} className={({ isActive }) => {
-            return `text-7xl font-extrabold uppercase ${isActive ? 'nav-item-active' : 'nav-item-inactive'} `
+            return `lg:text-7xl sm:text-5xl text-4xl font-extrabold uppercase ${isActive ? 'nav-item-active' : 'nav-item-inactive'} `
           }}>{label}
         </NavLink>
     </li>

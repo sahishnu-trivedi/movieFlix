@@ -14,6 +14,7 @@ export const GlobalContextProvider = (props) => {
     const [state, dispatch] = useReducer(favouritesreducer, initialState);
     const [clicked, setClicked] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
+    const [openSearchBar, setOpenSearchBar] = useState(false);
 
     useEffect(() => {
       localStorage.setItem("favourites", JSON.stringify(state.favourites))
@@ -32,7 +33,7 @@ export const GlobalContextProvider = (props) => {
     }
 
     return (
-      <GlobalContext.Provider value={{ favourites: state.favourites, allMovies: state.allMovies,  addMovieToFavourites, addAllMovies, removeMovieFromFavourites, clicked, setClicked, openMenu, setOpenMenu}}>
+      <GlobalContext.Provider value={{ favourites: state.favourites, allMovies: state.allMovies,  addMovieToFavourites, addAllMovies, removeMovieFromFavourites, clicked, setClicked, openMenu, setOpenMenu, openSearchBar, setOpenSearchBar}}>
           {props.children}
       </GlobalContext.Provider>
     )

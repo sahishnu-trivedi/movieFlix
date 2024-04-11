@@ -16,8 +16,11 @@ export default function MovieDetail() {
     const movieId = Number(query.get('id'))
     
     useEffect(() => {
-        movieDetail(movieId);
-    }, [])
+        if (!isNaN(movieId)) {
+            console.log('fullMovie : ', fullMovie)
+            movieDetail(movieId);
+        }
+    }, [movieId])
 
     return(
         <div className="flex justify-center">
@@ -33,7 +36,7 @@ export default function MovieDetail() {
                             <section aria-labelledby="information-heading" className="mt-2">
                                 <p className="text-l text-gray-900 text-tertiary-color ">{`${fullMovie.overview}`}</p>
 
-                                <div className="mt-6 flex items-center justify-between">
+                                <div className="mt-6 grid grid-cols-3 gap-4">
                                     <div>
                                         <h4 className="text-l font-bold text-gray-900 sm:pr-12 text-primary-color">Release Date</h4>
                                         <p className="text-m text-gray-900 text-tertiary-color">{`${fullMovie.release_date}`}</p>
@@ -44,7 +47,7 @@ export default function MovieDetail() {
                                             fullMovie.genres &&
                                             fullMovie.genres.map(genre => (
                                                 genre.name + ', '
-                                            )) 
+                                            ))
                                         }</p>
                                     </div>
                                     <div>
@@ -58,7 +61,7 @@ export default function MovieDetail() {
                                     </div>
                                 </div>
 
-                                <div className="flex items-center justify-between mt-6">
+                                <div className="grid grid-cols-3 gap-4 mt-6">
                                     <div>
                                         <h4 className="text-l font-bold text-gray-900 sm:pr-12 text-primary-color">Vote Average</h4>
                                         <p className="text-m text-gray-900 text-tertiary-color">{Math.round(`${fullMovie.vote_average}`)}</p>

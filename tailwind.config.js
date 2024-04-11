@@ -18,6 +18,12 @@ export default {
         'background-color': '#0B0C10',
       },
     },
+    screens: {
+      'sm': '576px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1200px',
+    },
   },
   plugins: [],
 }

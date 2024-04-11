@@ -15,11 +15,22 @@ function MovieSlider({ slides }) {
             <h3 className='mb-4 text-3xl font-bold text-primary-color'>Top 50</h3>
            <Swiper
                 spaceBetween={20}
-                slidesPerView={5}
+                slidesPerView={1}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 navigation={true} 
                 modules={[Navigation]}
+                breakpoints={{
+                    1200: {
+                      slidesPerView: 4,
+                    },
+                    991: {
+                        slidesPerView: 3,
+                    },
+                    480: {
+                        slidesPerView: 2,
+                    },
+                  }}
             >
                 {slides.map(slide => (
                     <SwiperSlide key={slide.id}>

@@ -9,7 +9,7 @@ export default function Favourites () {
     return(
         <div className="container mx-auto">
             <h2 className="text-4xl font-bold tracking-tight sm:text-6xl text-primary-color mt-24">Favourites</h2>
-            <div className="mt-5 grid grid-cols-6 gap-4">
+            <div className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {favourites && favourites.length > 0 &&
                 favourites.map(movie => 
                     <div key={movie.id}>
@@ -28,7 +28,7 @@ export default function Favourites () {
             </div>
             {favourites.length <= 0 && 
             <div>
-                <h2 className="text-4xl font-bold tracking-tight text-tertiary-color mt-5">Add Movies to Favourites</h2>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-tertiary-color mt-5">Add Movies to Favourites</h2>
             </div>
             }
         </div>

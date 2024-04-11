@@ -55,3 +55,10 @@ body{background: #0b0c10;}
   );}
 .detail-text-body{background-image: linear-gradient(to right, #000, #000);}
 .trending-series-title:before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background-color: #484848;}
+
+/* Responsiv CSS Start */
+@media(max-width: 769px){
+  .container{padding: 20px;}
+  .top-rated-movie-block{border-right: none;}
+}
+/* Responsiv CSS End */
