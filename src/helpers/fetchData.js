@@ -7,7 +7,7 @@ const options = {
 };
 
 export const fetchMovies = () => {
-    return fetch(`${import.meta.env.VITE_APP_BASE_URL}/now_playing?language=en-US&page=1`, options);
+    return fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1`, options);
 }
 
 export const fetchFavouritesMovies = () => {
@@ -19,11 +19,11 @@ export const fetchSearchedMovies = (searchValue) => {
 }
 
 export const fetchUpcomingMovies = () => {
-    return fetch(`${import.meta.env.VITE_APP_BASE_URL}/upcoming?language=en-US&page=1`, options);
+    return fetch(`https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`, options);
 }
 
 export const fetchTopRatedMovies = () => {
-    return fetch(`${import.meta.env.VITE_APP_BASE_URL}/top_rated?language=en-US&page=1`, options);
+    return fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`, options);
 }
 
 export const fetchTopRatedSeries = () => {
